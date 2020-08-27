@@ -7,11 +7,6 @@ app = Flask(__name__)
 model = pickle.load(open('model_mega2.pkl', 'rb'))
 
 
-@app.route('/favicon.')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
-
 @app.route('/')
 @app.route('/index')
 def home():
