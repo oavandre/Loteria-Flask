@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+    <title>Mega Sena</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    
+</head>
+
+<body>
+ <div class="login">
+
+	<h1>Informe as seis dezenas</h1>
+    <br>
+    {{ mensagem_probabilidade }}
+    
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <br>
+        <input type="number" name="primeiro_dezena" placeholder="Primeiro dezena" required="required" />
+        <br>
+        <input type="number" name="segunda_dezena" placeholder="Segunda dezena " required="required" />
+        <br>
+        <input type="number" name="terceira_dezena" placeholder="Terceira dezena" required="required" />
+        <br>
+        <input type="number" name="quarta_dezena" placeholder="Quarta dezena" required="required" />
+        <br>
+        <input type="number" name="quinta_dezena" placeholder="Quinta dezena" required="required" />
+        <br>
+        <input type="number" name="sexta_dezena" placeholder="Sexta dezena" required="required" />
+        <br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Verificar</button>
+        <br>
+        <br>
+        <br>
+
+    </form>
+    
+
+
+    <a href="https://github.com/oavandre" target="_blank">Osmar Andre</a>
+ </div>
+
+
+</body>
+</html>
